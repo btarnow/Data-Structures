@@ -78,3 +78,47 @@ def reverse_str(str, reversed_str=""):
 
     # return reverse_str(str[1:]) + s[0]) 
 
+
+
+# PROBLEM 5: Write a function that takes in a list and returns a sum of all of 
+# the numbers in a list using recursion 
+
+# input --> [1, 2, 3, 4]
+# output --> 10 
+
+# Pseudocode: 
+    # Base Case: When the starting list is empty. 
+
+    # Create a variable set to none 
+
+    # define a method that will take in a list. 
+
+def sum_recursion(lst, sum_lst=0):
+     
+     if not lst: 
+          return sum_lst 
+     
+     sum_lst += lst[0]
+
+     return sum_recursion(lst[1:], sum_lst)
+
+
+# PROBLEM 6: Write a function that computes the factorial of a number using 
+# recursion. The factorial of a number n is defined as the product of all 
+# numbers from 1 to n. For example, 4! = 4 x 3 x 2 x 1 = 24
+
+# Base case: when n becomes 0 
+
+def factorial_recursive(n):
+     
+    if n == 1:
+        return 1
+    return n * factorial_recursive(n-1)
+
+# Output if n = 4: 
+# 4
+# 4*3
+# 4*3*2
+# 4*3*2*1
+
+    
