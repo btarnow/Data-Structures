@@ -6,6 +6,7 @@
 # contains only letters is an isogram. Assume the empty string is an isogram. 
 # Ignore letter case.
 
+# SOLUTION WITH A DICTIONARY: 
 def is_isogram(string):
 
     letter_freq = {}
@@ -20,4 +21,18 @@ def is_isogram(string):
     return True 
 
 print(is_isogram("aba"))
+
+#SOLUTION UTILIZING THE .COUNT METHOD IN PYTHON: 
+def is_isogram_2(string):
+    string = string.lower()
+
+    for char in string: 
+        # check each letter in the string. If any of the letters exist more than 
+        # once, 
+        if string.count(char) > 1: 
+            return False 
+    return True 
+
+print(is_isogram_2("abcEe"))
+
 
